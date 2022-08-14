@@ -1,4 +1,3 @@
-'use strict'
 /*
  * Javascript implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519
  *
@@ -55,7 +54,7 @@ const _X25519_121665 = new Float64Array([0xDB41, 0x0001, 0x0000, 0x0000, 0x0000,
 
 _X25519_NINE[0] = 9
 
-class X25519 {
+export class X25519 {
   /**
    * *********************
    * PUBLIC STATIC METHOD
@@ -395,8 +394,4 @@ class X25519 {
     bytes[0] = bytes[0] & 0xF8
     bytes[31] = (bytes[31] & 0x7F) | 0x40
   }
-}
-
-if (typeof module !== 'undefined') {
-  module.exports = X25519
 }
