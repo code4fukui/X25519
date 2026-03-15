@@ -1,5 +1,7 @@
 # X25519.js
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 JavaScript ES module implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519.
 
 ## Description

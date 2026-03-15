@@ -25,7 +25,7 @@ const pub2 = X25519.getPublic(subbin(user2.privateKey, 0, 32));
 
 // user1
 const shared1 = X25519.getSharedKey(subbin(user1.privateKey, 0, 32), pub2);
-// user2 
+// user2
 const shared2 = X25519.getSharedKey(subbin(user2.privateKey, 0, 32), pub1);
 console.log(shared1, shared2);
 ```
