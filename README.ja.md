@@ -1,14 +1,14 @@
 # X25519.js
 
-JavaScript ES module implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519.
+JavaScript ES moduleによるCurve25519の楕円曲線Diffie-Hellman鍵交換の実装です。
 
-## Description
+## 概要
 
-In cryptography, Curve25519 is an elliptic curve offering 128 bits of security and designed for use with the elliptic curve Diffie–Hellman (ECDH) key agreement scheme. It is one of the fastest ECC curves; it is not covered by any known patents, and it is less susceptible to weak random-number generators. The reference implementation is public domain software.
+暗号化の分野では、Curve25519は128ビットのセキュリティを提供する楕円曲線で、楕円曲線Diffie–Hellman (ECDH)鍵合意方式で使用されます。高速で特許のない、弱い乱数生成器にも強いのが特徴です。リファレンス実装はパブリックドメインのソフトウェアです。
 
-The original Curve25519 paper defined it as a Diffie–Hellman (DH) function. Daniel J. Bernstein has since proposed that the name Curve25519 be used for the underlying curve, and the name X25519 for the DH function.
+Curve25519の論文では、それをDiffie–Hellman (DH)関数として定義しています。その後Daniel J. Bernsteinは、基礎となる曲線の名称をCurve25519、DH関数の名称をX25519とすることを提案しています。
 
-## Usage
+## 使い方
 
 ```js
 import { X25519 } from "https://code4fukui.github.io/X25519/X25519.js";
@@ -17,28 +17,28 @@ import { subbin } from "https://js.sabae.cc/binutil.js";
 
 const user1 = Ed25519.generateKeyPair();
 const pub1 = X25519.getPublic(subbin(user1.privateKey, 0, 32));
-// send pub1 to user2
+// pub1を user2に送る
 
 const user2 = Ed25519.generateKeyPair();
 const pub2 = X25519.getPublic(subbin(user2.privateKey, 0, 32));
-// send pub2 to user1
+// pub2を user1に送る
 
 // user1
 const shared1 = X25519.getSharedKey(subbin(user1.privateKey, 0, 32), pub2);
-// user2
+// user2 
 const shared2 = X25519.getSharedKey(subbin(user2.privateKey, 0, 32), pub1);
 console.log(shared1, shared2);
 ```
 
-## Authors
+## 作者
 
-* [Mykola Bubelich](https://bubelich.com) 
+* [Mykola Bubelich](https://bubelich.com)
 
-## Projects
+## プロジェクト
 
-* [CryptoEsel](https://cryptoesel.com) - Safe and secure file transfer
+* [CryptoEsel](https://cryptoesel.com) - 安全かつ確実なファイル転送
 
-## Links
+## リンク
 
 * http://tweetnacl.cr.yp.to/
 * https://github.com/dchest/tweetnacl-js
