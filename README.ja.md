@@ -1,6 +1,6 @@
 # X25519.js
 
-JavaScript ES moduleによるCurve25519の楕円曲線Diffie-Hellman鍵交換の実装です。
+JavaScript ES モジュールによる Curve25519 の楕円曲線 Diffie-Hellman 鍵交換の実装です。
 
 ## 概要
 
@@ -17,11 +17,11 @@ import { subbin } from "https://js.sabae.cc/binutil.js";
 
 const user1 = Ed25519.generateKeyPair();
 const pub1 = X25519.getPublic(subbin(user1.privateKey, 0, 32));
-// pub1を user2に送る
+// pub1をuser2に送る
 
 const user2 = Ed25519.generateKeyPair();
 const pub2 = X25519.getPublic(subbin(user2.privateKey, 0, 32));
-// pub2を user1に送る
+// pub2をuser1に送る
 
 // user1
 const shared1 = X25519.getSharedKey(subbin(user1.privateKey, 0, 32), pub2);
@@ -48,3 +48,7 @@ console.log(shared1, shared2);
 * https://gnunet.org/svn/gnunet-java/src/main/java/org/gnunet/util/crypto/Ed25519.java
 * http://www.movable-type.co.uk/scripts/sha256.html
 * http://samuelkerr.com/?p=431
+
+## ライセンス
+
+MIT License — [LICENSE](LICENSE)を参照してください。

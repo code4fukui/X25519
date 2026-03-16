@@ -34,7 +34,7 @@ console.log(shared1, shared2);
 
 ## Authors
 
-* [Mykola Bubelich](https://bubelich.com) 
+* [Mykola Bubelich](https://bubelich.com)
 
 ## Projects
 
@@ -50,3 +50,7 @@ console.log(shared1, shared2);
 * https://gnunet.org/svn/gnunet-java/src/main/java/org/gnunet/util/crypto/Ed25519.java
 * http://www.movable-type.co.uk/scripts/sha256.html
 * http://samuelkerr.com/?p=431
+
+## License
+
+MIT License — see [LICENSE](LICENSE).
