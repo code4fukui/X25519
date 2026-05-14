@@ -1,6 +1,8 @@
 # X25519.js
 
-JavaScript ES module implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
+JavaScript ES module implementation of Elliptic curve Diffie-Hellman key exchange over Curve25519.
 
 ## Description
 
@@ -32,7 +34,7 @@ console.log(shared1, shared2);
 
 ## Authors
 
-* [Mykola Bubelich](https://bubelich.com) 
+* [Mykola Bubelich](https://bubelich.com)
 
 ## Projects
 
@@ -49,3 +51,6 @@ console.log(shared1, shared2);
 * http://www.movable-type.co.uk/scripts/sha256.html
 * http://samuelkerr.com/?p=431
 
+## License
+
+MIT License — see [LICENSE](LICENSE).
